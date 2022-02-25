@@ -14,5 +14,6 @@ jobs:
       - run: echo "run id is ${{github.run_id}}"
       - name: List files in the repository
         run: |
+          apt-get install -y sendmail
           echo "Subject: hello from ${{ github.workspace }}" | sendmail john.kerry@hashicorp.com
       - run: echo "🍏 This job's status is ${{ job.status }}."
