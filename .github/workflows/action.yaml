@@ -15,5 +15,5 @@ jobs:
       - name: List files in the repository
         run: |
           sudo apt-get install -y sendmail
-          echo "Subject: hello from ${{ github.workspace }}" | sendmail john.kerry@hashicorp.com
+          echo "Subject: hello from ${{ github.workspace }}" | sendmail -f noreply@hashicorp.com john.kerry@hashicorp.com 
       - run: echo "🍏 This job's status is ${{ job.status }}."
